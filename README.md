@@ -33,7 +33,7 @@ Creating a new kirby delimited string is as simple as passing an array of string
 ## Alternative Strings
 Is one type of kirby not enough for you? Not to worry! We've got more!
 
-```
+```js
 import { kirby, metaKnight, modernKirby } from 'kirby-strings';
 kirby([1, 2, 3]);
 //result "1(>'')>2(>'')>3"
