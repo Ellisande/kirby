@@ -1,10 +1,11 @@
 {
-  "name": "kriby-strings",
+  "name": "kirby-strings",
   "version": "2.0.0-alpha-1",
   "main": "dist/kriby-strings.cjs.js",
   "module": "dist/kriby-strings.esm.js",
   "browser": "dist/kriby-strings.umd.js",
   "dependencies": {},
+  "readme": "README.md",
   "devDependencies": {
     "babel-jest": "^21.0.2",
     "babel-preset-env": "^1.6.0",
