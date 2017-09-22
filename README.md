@@ -1,46 +1,31 @@
-# rollup-starter-lib
+## Kirby
+Kirby is a JavaScript library for creating a parsing Kirby delimited string. Kirby delimited string use Kirby (>'')> as a delimited character for parsing strings.
 
-This repo contains a bare-bones example of how to create a library using Rollup, including importing a module from `node_modules` and converting it from CommonJS.
+## Why Kirby?
 
-We're creating a library called `how-long-till-lunch`, which usefully tells us how long we have to wait until lunch, using the [ms](https://github.com/zeit/ms) package:
+Kirby delimited strings are vastly better than any other kind of string delimiters. Most delimiters require you to jump through hoops to escape delimiting characters that appear in real text. Extensive analysis has shown that Kirbies appear in only -0.03% of content strings. Therefore, you never have to worry about silly escape characters or anything like that.
 
-```js
-console.log('it will be lunchtime in ' + howLongTillLunch());
+Additionally the Kirbies actually eat space, compressing the overall size of the string. A 100kb string can expect to become approximately 25kb after adding in hungry Kirbies to gobble up the space.
+
+## Usage
+
+Simply add kirby.js into your page
 ```
-
-## Getting started
-
-Clone this repository and install its dependencies:
-
-```bash
-git clone https://github.com/rollup/rollup-starter-lib
-cd rollup-starter-lib
-npm install
+  <script type="text/javascript" src="lib/kirby.js"></script>
 ```
+Once you have the kirby.js file you are ready to rock.
 
-`npm run build` builds the library to `dist`, generating three files:
-
-* `dist/how-long-till-lunch.cjs.js`
-    A CommonJS bundle, suitable for use in Node.js, that `require`s the external dependency. This corresponds to the `"main"` field in package.json
-* `dist/how-long-till-lunch.esm.js`
-    an ES module bundle, suitable for use in other people's libraries and applications, that `import`s the external dependency. This corresponds to the `"module"` field in package.json
-* `dist/how-long-till-lunch.umd.js`
-    a UMD build, suitable for use in any environment (including the browser, as a `<script>` tag), that includes the external dependency. This corresponds to the `"browser"` field in package.json
-
-`npm run dev` builds the library, then keeps rebuilding it whenever the source files change using [rollup-watch](https://github.com/rollup/rollup-watch).
-
-`npm test` builds the library, then tests it.
-
-*Note that you would often include the `dist` folder in your [.gitignore](https://github.com/rollup/rollup-starter-lib/blob/master/.gitignore) file, but they are included here for ease of illustration.*
-
-
-## Variations
-
-* [babel](https://github.com/rollup/rollup-starter-lib/tree/babel) — illustrates writing the source code in ES2015 and transpiling it for older environments with [Babel](https://babeljs.io/)
-* [buble](https://github.com/rollup/rollup-starter-lib/tree/buble) — similar, but using [Bublé](https://buble.surge.sh/) which is a faster alternative with less configuration
-
-
-
-## License
-
-[MIT](LICENSE).
+### Parsing a Kirby String
+Parsing a kirby delimited string is simple. Simply pass your kirby delimited string into kirby();
+```
+  var kirbyString = "Tom(>'')>Steve(>'')>Jack(>'')>";
+  var output = kirby(kirbyString);
+  //result = ["Tom","Steve","Jack"];
+```
+### Creating a Kriby String
+Creating a new kirby delimited string is as simple as passing an array of string into kirby's mouth.
+```
+  var input = ["Tom","Steve","Jack"];
+  var kirbyString = kirby(input);
+  //result = "Tom(>'')>Steve(>'')>Jack(>'')>";
+```
