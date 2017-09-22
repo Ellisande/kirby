@@ -1,6 +1,6 @@
 {
   "name": "kirby-strings",
-  "version": "2.0.0-alpha-1",
+  "version": "2.0.0",
   "main": "dist/kriby-strings.cjs.js",
   "module": "dist/kriby-strings.esm.js",
   "browser": "dist/kriby-strings.umd.js",
